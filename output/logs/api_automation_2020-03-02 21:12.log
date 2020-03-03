@@ -1,0 +1,6 @@
+ 20 03 02 21:12:11  INFO logger.py <module> [ line:44 ] 哈哈
+ 20 03 02 21:12:11  DEBUG logger.py <module> [ line:45 ] 噢噢噢
+ Mon, 02 Mar 2020 21:12:38  INFO logger.py <module> [ line:44 ] 哈哈
+ Mon, 02 Mar 2020 21:12:38  DEBUG logger.py <module> [ line:45 ] 噢噢噢
+ 20 03 02 21:12:46  INFO logger.py <module> [ line:44 ] 哈哈
+ 20 03 02 21:12:46  DEBUG logger.py <module> [ line:45 ] 噢噢噢
