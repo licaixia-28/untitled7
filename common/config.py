@@ -16,6 +16,7 @@ import os
 from common.dir_config import CONF_DIR
 
 
+# 配置执行环境
 class ReadConfig(configparser.ConfigParser):
 	def __init__(self):
 		# 调用父类的init方法
