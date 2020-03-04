@@ -37,7 +37,7 @@ class ExecuteMysql(object):
 		self.con.commit()
 		return self.cur.fetchone()
 
-	#查询多条结果
+	# 查询多条结果
 	def find_many(self, sql, num):
 		# 执行SQL语句
 		self.cur.execute(sql)
@@ -63,7 +63,7 @@ class ExecuteMysql(object):
 if __name__ == '__main__':
 	db = ExecuteMysql()
 	# 查询一条结果，查询结果有多条时只取第一条，没有时返回None
-	sql = "select LeaveAmount from member where Id=90;"
+	sql = "select ID from member where Id=90;"
 	res = db.find_one(sql=sql)[0]
 	print(res)
 	# 查询多条结果

@@ -39,7 +39,7 @@ handler_2 = RotatingFileHandler(log_name, backupCount=20, encoding="utf-8")
 
 # 配置日志输出的格式
 # format:使用指定字符串格式 datefmt：使用指定日期和时间的格式  level:日志输出的等级 handlers:
-logging.basicConfig(format=fmt, datefmt=date_fmt, level=logging.DEBUG, handlers=[handler_1, handler_2])
+logging.basicConfig(format=fmt, datefmt=date_fmt, level=logging.INFO, handlers=[handler_1, handler_2])
 
 if __name__ == '__main__':
     logging.info("哈哈")
