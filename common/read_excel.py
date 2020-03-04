@@ -51,6 +51,7 @@ class ReadExcel(object):
 
 		# 获取表单的表头信息
 		titles = []
+		# print(rows_date[0])
 		for title in rows_date[0]:
 			# 对title的值是否为空做判断，容错机制
 			if title.value:
@@ -59,6 +60,7 @@ class ReadExcel(object):
 
 		# 定义一个空列表来存储测试用例数据
 		cases = []
+		# print(rows_date[1:-1])
 		# 从第二行开始就是测试用例数据
 		for case in rows_date[1:]:
 			# date用来临时存放每行的用例数据
@@ -91,10 +93,10 @@ if __name__ == '__main__':
 	from common.dir_config import DATE_DIR
 	import os
 	readexcel = ReadExcel(os.path.join(DATE_DIR, "api_automation.xlsx"), "login")
-	# cases = readexcel.read_line_date()
-	# # print(cases)
+	cases = readexcel.read_line_date()
+	# print(cases)
 	# for case in cases:
-	# 	print(case.title, case.url)
-	readexcel.write_date(4, 1, "看看")
+	# 	print(case.api_name, case.url)
+	# readexcel.write_date(4, 1, "看看")
 
 
