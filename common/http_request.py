@@ -20,6 +20,7 @@ from common import logger
 # 不记录cookies信息给下一次使用
 class HTTPRequest1(object):
 	def request(self, method, url, params=None, data=None, headers=None, cookies=None, json=None):
+		# 将字符串里的大写转换成小写
 		method = method.lower()
 		if method == "post":
 			# 判断是否使用json传参
@@ -34,7 +35,7 @@ class HTTPRequest1(object):
 			return requests.get(url=url, params=params, headers=headers, cookies=cookies)
 
 
-class HTTPRequest2(object):
+class HTTPRequest(object):
     """记录cookies信息给下一次请求使用"""
 
     def __init__(self):
@@ -67,8 +68,9 @@ if __name__ == '__main__':
 	httprequest = HTTPRequest1()
 	url = "http://118.24.221.133:8081/futureloan/mvc/api/member/login"
 	method = "post"
-	data = "{'mobilephone': '13384698871', 'pwd': 'ac1234567'}"
+	data = "{'mobilephone': '13342884220', 'pwd': '123456'}"
 	response = httprequest.request(method=method, url=url, data=data)
 	print(response.status_code)
 	print(response.json())
+
 

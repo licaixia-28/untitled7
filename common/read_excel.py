@@ -94,9 +94,11 @@ if __name__ == '__main__':
 	import os
 	readexcel = ReadExcel(os.path.join(DATE_DIR, "api_automation.xlsx"), "login")
 	cases = readexcel.read_line_date()
-	# print(cases)
-	# for case in cases:
-	# 	print(case.api_name, case.url)
+	print(cases)
+	for case in cases:
+		print(type(case.api_name), type(case.url))
+
 	# readexcel.write_date(4, 1, "看看")
+
 
 
