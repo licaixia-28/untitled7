@@ -64,9 +64,10 @@ class SendEmail(object):
 
 
 if __name__ == '__main__':
-	import os
-	from common.dir_config import LOGS_DIR
-	file_path = os.path.join(LOGS_DIR, "api_automation_2020-03-02 15:05.log")
-	print(file_path)
-	SendEmail.send_qq_file_email("测试邮件", "测试邮件", file_path=file_path)
+	pass
+	# import os
+	# from common.dir_config import LOGS_DIR
+	# file_path = os.path.join(LOGS_DIR, "api_automation_2020-03-05 13:53.log")
+	# print(file_path)
+	# SendEmail.send_qq_file_email("测试邮件", "测试邮件", file_path=file_path)
 

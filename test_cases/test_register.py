@@ -21,12 +21,14 @@ from common.read_excel import ReadExcel
 from common.http_request import HTTPRequest
 from common import logger
 from common.execute_mysql import ExecuteMysql
-from common.dir_config import DATE_DIR
+from common.dir_config import DATE_DIR, REPORT_DIR
 from common.config import conf
 from library.ddt import ddt, data
 from common.random_phone import RandomPhone
 from common.sql_assertion import SqlAssertion
 from common.tools import random_phone
+from common.dir_config import LOGS_DIR
+
 
 # 从配置文件获取数据
 file_name = conf.get("excel", "file_name")
@@ -58,10 +60,11 @@ class RegisterTestCase(unittest.TestCase):
 	def test_register(self, case):
 		url = conf.get("env", "url") + case.url
 		self.row = case.case_id + 1
-		# 将随机的手机号码写入参数
+		# 从EXCEl用例连获取request_data字典里的mobilephone的值
 		mobilephone = eval(case.request_data)["mobilephone"]
 		# 调用random_phone方法，获取随机手机号
 		phone = random_phone(mobilephone[-3:])
+		# 用随机手机号替换用例里面的号段
 		request_data = case.request_data.replace(mobilephone, phone)
 		response = self.request.request(method=case.method, url=url, data=eval(request_data))
 		# 插入SQL断言到excel
@@ -94,7 +97,6 @@ class RegisterTestCase(unittest.TestCase):
 		finally:
 			self.wb.write_date(self.row, 9, str(res))
 			self.wb.write_date(self.row, 10, result)
-
 
 
 

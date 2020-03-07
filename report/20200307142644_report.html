@@ -116,9 +116,9 @@ function html_escape(s) {
 <div class='heading'>
 <h1 style="font-family: Microsoft YaHei">api_report</h1>
 <p class='attribute'><strong>测试人员 : </strong> tester</p>
-<p class='attribute'><strong>开始时间 : </strong> 2020-03-07 14:26:45</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:01.160120</p>
-<p class='attribute'><strong>测试结果 : </strong> 共 3，通过 3，通过率= 100.00%</p>
+<p class='attribute'><strong>开始时间 : </strong> 2020-03-07 22:10:59</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:02.366922</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 5，通过 5，通过率= 100.00%</p>
 
 <p class='description'>这是第一份测试报告</p>
 </div>
@@ -127,8 +127,8 @@ function html_escape(s) {
 <p id='show_detail_line'>
 <a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 100.00% }</a>
 <a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
-<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 3 }</a>
-<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 3 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 5 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 5 }</a>
 </p>
 <table id='result_table' class="table table-condensed table-bordered table-hover">
 <colgroup>
@@ -205,15 +205,15 @@ pt1_2:
 
 <tr class='passClass warning'>
     <td>test_register.RegisterTestCase</td>
-    <td class="text-center">1</td>
-    <td class="text-center">1</td>
+    <td class="text-center">3</td>
+    <td class="text-center">3</td>
     <td class="text-center">0</td>
     <td class="text-center">0</td>
-    <td class="text-center"><a href="javascript:showClassDetail('c2',1)" class="detail" id='c2'>详细</a></td>
+    <td class="text-center"><a href="javascript:showClassDetail('c2',3)" class="detail" id='c2'>详细</a></td>
 </tr>
 
 <tr id='pt2_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_register_1: 正常注册</div></td>
+    <td class='passCase'><div class='testcase'>test_register_1: 正常注册130</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
     <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
@@ -225,7 +225,53 @@ pt1_2:
     
 pt2_1: 
 请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register
-请求数据：{'mobilephone': '13914236865', 'pwd': '1234567', 'regname': 'user1'}
+请求数据：{'mobilephone': '13060520064', 'pwd': '1234567', 'regname': 'user1'}
+期望结果：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}
+服务器响应数据：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt2_2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register_2: 正常注册131</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_2'>通过</button>
+    <div id='div_pt2_2' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_2'>通过</button>
+    <div id='div_pt2_2' class="collapse in" align="left">
+    <pre>
+    
+pt2_2: 
+请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register
+请求数据：{'mobilephone': '13163678192', 'pwd': '1234567', 'regname': 'user1'}
+期望结果：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}
+服务器响应数据：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'}
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr id='pt2_3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_register_3: 正常注册132</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt2_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_3'>通过</button>
+    <div id='div_pt2_3' class="collapse">  -->
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt2_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_3'>通过</button>
+    <div id='div_pt2_3' class="collapse in" align="left">
+    <pre>
+    
+pt2_3: 
+请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register
+请求数据：{'mobilephone': '13213969025', 'pwd': '1234567', 'regname': 'user1'}
 期望结果：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}
 服务器响应数据：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'}
 
@@ -237,8 +283,8 @@ pt2_1:
 
 <tr id='total_row' class="text-center active">
     <td>总计</td>
-    <td>3</td>
-    <td>3</td>
+    <td>5</td>
+    <td>5</td>
     <td>0</td>
     <td>0</td>
     <td>通过率：100.00%</td>

@@ -12,12 +12,15 @@ E-mail:530103946@qq.com
 
 """
 import unittest
-from library.HTMLTestRunnerNew import HTMLTestRunner
-from common.config import conf
-from common.dir_config import CASE_DIR, REPORT_DIR
-from common.send_email import SendEmail
 import os
 import time
+
+from library.HTMLTestRunnerNew import HTMLTestRunner
+from common.config import conf
+from common.dir_config import CASE_DIR, REPORT_DIR, DATE_DIR
+from common.send_email import SendEmail
+from common.dir_config import LOGS_DIR
+from common.read_excel import ReadExcel
 
 
 _title = "api_report"
@@ -33,6 +36,7 @@ suite = unittest.TestSuite()  # 创建测试集合
 loader = unittest.TestLoader()
 suite.addTest(loader.discover(CASE_DIR))
 
+
 with open(file_path, 'wb') as f:
     runner = HTMLTestRunner(
         stream=f,
@@ -42,3 +46,16 @@ with open(file_path, 'wb') as f:
         tester=_tester
     )
     runner.run(suite)
+
+
+file_name = conf.get("excel", "file_name")
+wb = ReadExcel(os.path.join(DATE_DIR, file_name), "register")
+cases = wb.read_line_date()
+for case in cases:
+     pass
+
+# 发送邮件
+sendemail = SendEmail()
+file_path = os.path.join(REPORT_DIR, report_name)
+sendemail.send_qq_file_email(cases.interface, cases.title, file_path=file_path)
+

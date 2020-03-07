@@ -15,6 +15,7 @@ import random
 from common.read_excel import ReadExcel
 import os
 from common.dir_config import DATE_DIR
+from common.dir_config import REPORT_DIR
 
 class WritePhone():
 
@@ -34,7 +35,17 @@ class WritePhone():
 
 
 
+
+
 if __name__ == '__main__':
-	wp = WritePhone()
-	phone = wp.dic()
-	print(phone)
+	import re
+	lists = os.listdir(REPORT_DIR)
+	# lists.sort(key=lambda fn: os.path.getmtime(REPORT_DIR + '\\' + fn))
+	# for path in lists:
+	# 	full_path = os.path.join(REPORT_DIR, path)
+	# 	# print(full_path)
+	# file = os.path.join(REPORT_DIR, list[-1])
+
+	# s = ['a.dat', 'c.dat', 'b.dat']
+	new = sorted(lists, key=lambda i:int(re.match(r'(\d+)', i).group()))
+	print(new)
