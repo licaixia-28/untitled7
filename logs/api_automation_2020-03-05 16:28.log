@@ -1,0 +1,6 @@
+ Thu, 05 Mar 2020 16:28:07  INFO http_request.py <module> [ line:67 ] kk
+ Thu, 05 Mar 2020 16:28:07  INFO http_request.py request [ line:31 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/login，请求参数：{'mobilephone': '13384698871', 'pwd': 'ac1234567'}
+ Thu, 05 Mar 2020 16:28:26  INFO http_request.py <module> [ line:67 ] kk
+ Thu, 05 Mar 2020 16:28:26  INFO http_request.py request [ line:31 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/login，请求参数：{'mobilephone': '13384698871', 'pwd': 'ac1234567'}
+ Thu, 05 Mar 2020 16:28:52  INFO http_request.py <module> [ line:67 ] kk
+ Thu, 05 Mar 2020 16:28:52  INFO http_request.py request [ line:31 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/login，请求参数：{'mobilephone': '13384698871', 'pwd': 'ac1234567'}

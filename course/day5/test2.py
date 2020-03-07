@@ -11,8 +11,6 @@ E-mail:530103946@qq.com
 
 
 """
-
-
 class Book(object):
 	# 定义类属性
 	username = 'mt'
@@ -44,13 +42,15 @@ class Book(object):
 		self.add1()
 
 
+
+
 if __name__ == '__main__':
 	# 实例化Book类给生成对象book
 	book = Book()
 	# 实例对象调用静态方法
 	# book.add()
 	# 直接调用类方法不会执行实例方法，之后执行类方法
-	Book.add1()
+	# Book.add1()
 	# 实例方法可调用类方法
 	# book.add1()
 	# book.add2()

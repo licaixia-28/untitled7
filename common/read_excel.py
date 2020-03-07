@@ -12,6 +12,7 @@ E-mail:530103946@qq.com
 
 """
 import openpyxl
+import random
 
 
 class Case(object):
@@ -89,14 +90,16 @@ class ReadExcel(object):
 		self.close()
 
 
+
+
 if __name__ == '__main__':
 	from common.dir_config import DATE_DIR
 	import os
-	readexcel = ReadExcel(os.path.join(DATE_DIR, "api_automation.xlsx"), "login")
-	cases = readexcel.read_line_date()
-	print(cases)
-	for case in cases:
-		print(type(case.api_name), type(case.url))
+	# readexcel = ReadExcel(os.path.join(DATE_DIR, "api_automation.xlsx"), "login")
+	# )	cases = readexcel.read_line_date()
+	# print(cases)
+	# for case in cases:
+	# 	print(type(case.api_name), type(case.url)
 
 	# readexcel.write_date(4, 1, "看看")
 

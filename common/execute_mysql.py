@@ -63,9 +63,13 @@ class ExecuteMysql(object):
 if __name__ == '__main__':
 	db = ExecuteMysql()
 	# 查询一条结果，查询结果有多条时只取第一条，没有时返回None
-	sql = "select ID from member where Id=90;"
-	res = db.find_one(sql=sql)[0]
+	sql = "select * from member where MobilePhone = 13914236865;"
+	res = db.find_one(sql=sql)
 	print(res)
+	if res:
+		print("pass")
+	else:
+		print("fail")
 	# 查询多条结果
 	# sql = "select * from member where Id>88;"
 	# res = db.find_many(sql=sql, num=3)
