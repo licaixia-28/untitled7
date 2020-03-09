@@ -65,11 +65,7 @@ if __name__ == '__main__':
 	# 查询一条结果，查询结果有多条时只取第一条，没有时返回None
 	sql = "select * from member where MobilePhone = 13914236865;"
 	res = db.find_one(sql=sql)
-	print(res)
-	if res:
-		print("pass")
-	else:
-		print("fail")
+	print(res[3])
 	# 查询多条结果
 	# sql = "select * from member where Id>88;"
 	# res = db.find_many(sql=sql, num=3)
@@ -82,9 +78,4 @@ if __name__ == '__main__':
 	# sql = "select * from member where Id<88;"
 	# res = db.find_count(sql=sql)
 	# print(res)
-
-
-
-
-
 

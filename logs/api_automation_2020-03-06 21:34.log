@@ -1,2 +1,0 @@
- Fri, 06 Mar 2020 21:34:49  INFO test_register.py setUpClass [ line:39 ] ==================== 准备开始执行注册接口测试 ====================
- Fri, 06 Mar 2020 21:34:50  INFO test_register.py tearDownClass [ line:45 ] ==================== 注册接口测试执行完毕====================

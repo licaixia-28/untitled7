@@ -1,4 +1,0 @@
- Sat, 07 Mar 2020 12:02:58  INFO test_register.py setUpClass [ line:43 ] ==================== 准备开始执行注册接口测试 ====================
- Sat, 07 Mar 2020 12:02:58  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '13961398273', 'pwd': '1234567', 'regname': 'user1'}
- Sat, 07 Mar 2020 12:02:59  INFO test_register.py test_register [ line:96 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
- Sat, 07 Mar 2020 12:02:59  INFO test_register.py tearDownClass [ line:49 ] ==================== 注册接口测试执行完毕====================
