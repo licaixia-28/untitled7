@@ -1,0 +1,2 @@
+ Wed, 11 Mar 2020 10:26:26  INFO test_search.py setUpClass [ line:57 ] ==================== 准备开始执行查询接口测试 ====================
+ Wed, 11 Mar 2020 10:26:26  INFO test_search.py tearDownClass [ line:63 ] ==================== 查询接口测试执行完毕====================

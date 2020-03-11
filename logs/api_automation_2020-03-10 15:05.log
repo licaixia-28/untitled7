@@ -1,0 +1,525 @@
+ Tue, 10 Mar 2020 15:05:22  INFO test_login.py setUpClass [ line:40 ] ==================== 准备开始执行登录接口测试 ====================
+ Tue, 10 Mar 2020 15:05:23  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/login， 请求参数：{'mobilephone': '13941387738', 'pwd': '1234567'}
+ Tue, 10 Mar 2020 15:05:23  INFO test_login.py test_login [ line:77 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"登录成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '登录成功'},测试通过
+ Tue, 10 Mar 2020 15:05:24  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/login， 请求参数：{'mobilephone': '150 71369970', 'pwd': '123456'}
+ Tue, 10 Mar 2020 15:05:24  INFO test_login.py test_login [ line:77 ] 预期结果是：{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'}, 实际结果是：{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'},测试通过
+ Tue, 10 Mar 2020 15:05:24  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/login， 请求参数：{'mobilephone': '18306087688', 'pwd': '1234568'}
+ Tue, 10 Mar 2020 15:05:24  INFO test_login.py test_login [ line:77 ] 预期结果是：{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'}, 实际结果是：{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'},测试通过
+ Tue, 10 Mar 2020 15:05:24  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/login， 请求参数：{'mobilephone': '', 'pwd': '1234568'}
+ Tue, 10 Mar 2020 15:05:24  ERROR test_login.py test_login [ line:73 ] {'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'} != {'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'}
+- {'code': '20111', 'data': None, 'msg': '用户名或密码错误', 'status': 0}
+?              ^^                         ^^^^^^^^
+
++ {'code': '20103', 'data': None, 'msg': '手机号不能为空', 'status': 0}
+?              ^^                         ^^^^^^^
+Traceback (most recent call last):
+  File "/Users/huangjie/学习/untitled7/test_cases/test_login.py", line 70, in test_login
+    self.assertEqual(eval(case.expected_data), res)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'} != {'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'}
+- {'code': '20111', 'data': None, 'msg': '用户名或密码错误', 'status': 0}
+?              ^^                         ^^^^^^^^
+
++ {'code': '20103', 'data': None, 'msg': '手机号不能为空', 'status': 0}
+?              ^^                         ^^^^^^^
+
+ Tue, 10 Mar 2020 15:05:25  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/login， 请求参数：{'mobilephone': '13941387738', 'pwd': ''}
+ Tue, 10 Mar 2020 15:05:25  ERROR test_login.py test_login [ line:73 ] {'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'} != {'status': 0, 'code': '20103', 'data': None, 'msg': '密码不能为空'}
+- {'code': '20111', 'data': None, 'msg': '用户名或密码错误', 'status': 0}
+?              ^^                         ----  ^^
+
++ {'code': '20103', 'data': None, 'msg': '密码不能为空', 'status': 0}
+?              ^^                           ^^^^
+Traceback (most recent call last):
+  File "/Users/huangjie/学习/untitled7/test_cases/test_login.py", line 70, in test_login
+    self.assertEqual(eval(case.expected_data), res)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'} != {'status': 0, 'code': '20103', 'data': None, 'msg': '密码不能为空'}
+- {'code': '20111', 'data': None, 'msg': '用户名或密码错误', 'status': 0}
+?              ^^                         ----  ^^
+
++ {'code': '20103', 'data': None, 'msg': '密码不能为空', 'status': 0}
+?              ^^                           ^^^^
+
+ Tue, 10 Mar 2020 15:05:25  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/login， 请求参数：{'mobilephone': '13941387738', 'pwd': '1234569'}
+ Tue, 10 Mar 2020 15:05:25  INFO test_login.py test_login [ line:77 ] 预期结果是：{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'}, 实际结果是：{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'},测试通过
+ Tue, 10 Mar 2020 15:05:26  INFO test_login.py tearDownClass [ line:46 ] ==================== 登录接口测试执行完毕====================
+ Tue, 10 Mar 2020 15:05:26  INFO test_recharge.py setUpClass [ line:41 ] ==================== 准备开始执行充值接口测试 ====================
+ Tue, 10 Mar 2020 15:05:26  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/login， 请求参数：{'mobilephone': '13941387738', 'pwd': '1234567'}
+ Tue, 10 Mar 2020 15:05:26  INFO test_recharge.py test_recharge [ line:80 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"登录成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '登录成功'},测试通过
+ Tue, 10 Mar 2020 15:05:26  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/recharge， 请求参数：{'mobilephone': '13941387738', 'amount': '200'}
+ Tue, 10 Mar 2020 15:05:27  INFO test_recharge.py test_recharge [ line:80 ] 预期结果是：{'status': 1, 'code': '10001', 'data': {'id': 1507, 'regname': 'user1', 'pwd': 'FCEA920F7412B5DA7BE0CF42B8C93759', 'mobilephone': '13941387738', 'leaveamount': '7586.00', 'type': '1', 'regtime': '2020-03-09 14:25:05.0'}, 'msg': '充值成功'}, 实际结果是：{'status': 1, 'code': '10001', 'data': {'id': 1507, 'regname': 'user1', 'pwd': 'FCEA920F7412B5DA7BE0CF42B8C93759', 'mobilephone': '13941387738', 'leaveamount': '7586.00', 'type': '1', 'regtime': '2020-03-09 14:25:05.0'}, 'msg': '充值成功'},测试通过
+ Tue, 10 Mar 2020 15:05:27  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/recharge， 请求参数：{'mobilephone': '13222984206', 'amount': '200'}
+ Tue, 10 Mar 2020 15:05:27  INFO test_recharge.py test_recharge [ line:80 ] 预期结果是：{'status': 0, 'code': '20104', 'data': None, 'msg': '此手机号对应的会员不存在'}, 实际结果是：{'status': 0, 'code': '20104', 'data': None, 'msg': '此手机号对应的会员不存在'},测试通过
+ Tue, 10 Mar 2020 15:05:27  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/recharge， 请求参数：{'mobilephone': '13523', 'amount': '201'}
+ Tue, 10 Mar 2020 15:05:27  INFO test_recharge.py test_recharge [ line:80 ] 预期结果是：{'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}, 实际结果是：{'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'},测试通过
+ Tue, 10 Mar 2020 15:05:28  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/recharge， 请求参数：{'mobilephone': '', 'amount': '201'}
+ Tue, 10 Mar 2020 15:05:28  ERROR test_recharge.py test_recharge [ line:76 ] {'status': 0, 'code': '20110', 'data': None, 'msg': '手机号码格式不正确'} != {'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'}
+- {'code': '20110', 'data': None, 'msg': '手机号码格式不正确', 'status': 0}
+?              -                             --- ^^
+
++ {'code': '20103', 'data': None, 'msg': '手机号不能为空', 'status': 0}
+?               +                             ^^^
+Traceback (most recent call last):
+  File "/Users/huangjie/学习/untitled7/test_cases/test_recharge.py", line 73, in test_recharge
+    self.assertEqual(eval(case.expected_data), res)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'status': 0, 'code': '20110', 'data': None, 'msg': '手机号码格式不正确'} != {'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'}
+- {'code': '20110', 'data': None, 'msg': '手机号码格式不正确', 'status': 0}
+?              -                             --- ^^
+
++ {'code': '20103', 'data': None, 'msg': '手机号不能为空', 'status': 0}
+?               +                             ^^^
+
+ Tue, 10 Mar 2020 15:05:28  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/recharge， 请求参数：{'mobilephone': '13941387738', 'amount': ''}
+ Tue, 10 Mar 2020 15:05:28  INFO test_recharge.py test_recharge [ line:80 ] 预期结果是：{'status': 0, 'code': '20115', 'data': None, 'msg': '请输入金额'}, 实际结果是：{'status': 0, 'code': '20115', 'data': None, 'msg': '请输入金额'},测试通过
+ Tue, 10 Mar 2020 15:05:28  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/recharge， 请求参数：{'mobilephone': '13941387738', 'amount': '20.098'}
+ Tue, 10 Mar 2020 15:05:28  INFO test_recharge.py test_recharge [ line:80 ] 预期结果是：{'status': 0, 'code': '20116', 'data': None, 'msg': '输入金额的金额小数不能超过两位'}, 实际结果是：{'status': 0, 'code': '20116', 'data': None, 'msg': '输入金额的金额小数不能超过两位'},测试通过
+ Tue, 10 Mar 2020 15:05:29  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/recharge， 请求参数：{'mobilephone': '13941387738', 'amount': '-30'}
+ Tue, 10 Mar 2020 15:05:29  INFO test_recharge.py test_recharge [ line:80 ] 预期结果是：{'status': 0, 'code': '20117', 'data': None, 'msg': '请输入范围在0到50万之间的正数金额'}, 实际结果是：{'status': 0, 'code': '20117', 'data': None, 'msg': '请输入范围在0到50万之间的正数金额'},测试通过
+ Tue, 10 Mar 2020 15:05:29  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/recharge， 请求参数：{'mobilephone': '13941387738', 'amount': '1000000'}
+ Tue, 10 Mar 2020 15:05:29  INFO test_recharge.py test_recharge [ line:80 ] 预期结果是：{'status': 0, 'code': '20117', 'data': None, 'msg': '请输入范围在0到50万之间的正数金额'}, 实际结果是：{'status': 0, 'code': '20117', 'data': None, 'msg': '请输入范围在0到50万之间的正数金额'},测试通过
+ Tue, 10 Mar 2020 15:05:29  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/recharge， 请求参数：{'mobilephone': '13941387738', 'amount': '哈哈'}
+ Tue, 10 Mar 2020 15:05:29  INFO test_recharge.py test_recharge [ line:80 ] 预期结果是：{'status': 0, 'code': '20118', 'data': None, 'msg': '请输入数字'}, 实际结果是：{'status': 0, 'code': '20118', 'data': None, 'msg': '请输入数字'},测试通过
+ Tue, 10 Mar 2020 15:05:29  INFO test_recharge.py tearDownClass [ line:47 ] ==================== 充值接口测试接口测试执行完毕====================
+ Tue, 10 Mar 2020 15:05:29  INFO test_register1.py setUpClass [ line:55 ] ==================== 准备开始执行注册接口测试 ====================
+ Tue, 10 Mar 2020 15:05:30  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '13321849315', 'pwd': '1234567', 'regname': 'user1'}
+ Tue, 10 Mar 2020 15:05:30  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:30  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '14911802908', 'pwd': '1234567', 'regname': 'user1'}
+ Tue, 10 Mar 2020 15:05:30  ERROR test_register1.py test_register [ line:90 ] {'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'} != {'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}
+- {'code': '10001', 'data': None, 'msg': '注册成功', 'status': 1}
+?             ^^^                         ^^^^             ^
+
++ {'code': '20109', 'data': None, 'msg': '手机号码格式不正确', 'status': 0}
+?           ++  ^                         ^^^^^^^^^             ^
+Traceback (most recent call last):
+  File "/Users/huangjie/学习/untitled7/test_cases/test_register1.py", line 87, in test_register
+    self.assertEqual(eval(case.expected_data), res)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'} != {'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}
+- {'code': '10001', 'data': None, 'msg': '注册成功', 'status': 1}
+?             ^^^                         ^^^^             ^
+
++ {'code': '20109', 'data': None, 'msg': '手机号码格式不正确', 'status': 0}
+?           ++  ^                         ^^^^^^^^^             ^
+
+ Tue, 10 Mar 2020 15:05:30  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '15389500977', 'pwd': '1234567', 'regname': 'user1'}
+ Tue, 10 Mar 2020 15:05:30  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:31  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '17359668643', 'pwd': '1234567', 'regname': 'user1'}
+ Tue, 10 Mar 2020 15:05:31  ERROR test_register1.py test_register [ line:90 ] {'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'} != {'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}
+- {'code': '10001', 'data': None, 'msg': '注册成功', 'status': 1}
+?             ^^^                         ^^^^             ^
+
++ {'code': '20109', 'data': None, 'msg': '手机号码格式不正确', 'status': 0}
+?           ++  ^                         ^^^^^^^^^             ^
+Traceback (most recent call last):
+  File "/Users/huangjie/学习/untitled7/test_cases/test_register1.py", line 87, in test_register
+    self.assertEqual(eval(case.expected_data), res)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'} != {'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}
+- {'code': '10001', 'data': None, 'msg': '注册成功', 'status': 1}
+?             ^^^                         ^^^^             ^
+
++ {'code': '20109', 'data': None, 'msg': '手机号码格式不正确', 'status': 0}
+?           ++  ^                         ^^^^^^^^^             ^
+
+ Tue, 10 Mar 2020 15:05:31  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '17795215136', 'pwd': '1234567', 'regname': 'user1'}
+ Tue, 10 Mar 2020 15:05:31  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:31  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '18049813380', 'pwd': '1234567', 'regname': 'user1'}
+ Tue, 10 Mar 2020 15:05:31  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:32  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '18133406998', 'pwd': '1234567', 'regname': 'user1'}
+ Tue, 10 Mar 2020 15:05:32  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:32  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '18952933338', 'pwd': '1234567', 'regname': 'user1'}
+ Tue, 10 Mar 2020 15:05:32  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:32  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '19902160438', 'pwd': '1234567', 'regname': 'user1'}
+ Tue, 10 Mar 2020 15:05:32  ERROR test_register1.py test_register [ line:90 ] {'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'} != {'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}
+- {'code': '10001', 'data': None, 'msg': '注册成功', 'status': 1}
+?             ^^^                         ^^^^             ^
+
++ {'code': '20109', 'data': None, 'msg': '手机号码格式不正确', 'status': 0}
+?           ++  ^                         ^^^^^^^^^             ^
+Traceback (most recent call last):
+  File "/Users/huangjie/学习/untitled7/test_cases/test_register1.py", line 87, in test_register
+    self.assertEqual(eval(case.expected_data), res)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'} != {'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}
+- {'code': '10001', 'data': None, 'msg': '注册成功', 'status': 1}
+?             ^^^                         ^^^^             ^
+
++ {'code': '20109', 'data': None, 'msg': '手机号码格式不正确', 'status': 0}
+?           ++  ^                         ^^^^^^^^^             ^
+
+ Tue, 10 Mar 2020 15:05:32  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '13070510772', 'pwd': '1234567', 'regname': 'user1'}
+ Tue, 10 Mar 2020 15:05:33  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:33  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '13142285612', 'pwd': '1234567', 'regname': 'user1'}
+ Tue, 10 Mar 2020 15:05:33  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:33  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '13265425032', 'pwd': '1234567', 'regname': 'user1'}
+ Tue, 10 Mar 2020 15:05:33  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:33  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '14585975138', 'pwd': '1234567', 'regname': 'user1'}
+ Tue, 10 Mar 2020 15:05:34  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:34  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '15574699723', 'pwd': '1234567', 'regname': 'user1'}
+ Tue, 10 Mar 2020 15:05:34  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:34  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '15673112167', 'pwd': '1234567', 'regname': 'user1'}
+ Tue, 10 Mar 2020 15:05:34  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:34  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '16630747332', 'pwd': '1234567', 'regname': 'user1'}
+ Tue, 10 Mar 2020 15:05:34  ERROR test_register1.py test_register [ line:90 ] {'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'} != {'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}
+- {'code': '10001', 'data': None, 'msg': '注册成功', 'status': 1}
+?             ^^^                         ^^^^             ^
+
++ {'code': '20109', 'data': None, 'msg': '手机号码格式不正确', 'status': 0}
+?           ++  ^                         ^^^^^^^^^             ^
+Traceback (most recent call last):
+  File "/Users/huangjie/学习/untitled7/test_cases/test_register1.py", line 87, in test_register
+    self.assertEqual(eval(case.expected_data), res)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'} != {'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}
+- {'code': '10001', 'data': None, 'msg': '注册成功', 'status': 1}
+?             ^^^                         ^^^^             ^
+
++ {'code': '20109', 'data': None, 'msg': '手机号码格式不正确', 'status': 0}
+?           ++  ^                         ^^^^^^^^^             ^
+
+ Tue, 10 Mar 2020 15:05:35  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '17171596654', 'pwd': '1234567', 'regname': 'user1'}
+ Tue, 10 Mar 2020 15:05:35  ERROR test_register1.py test_register [ line:90 ] {'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'} != {'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}
+- {'code': '10001', 'data': None, 'msg': '注册成功', 'status': 1}
+?             ^^^                         ^^^^             ^
+
++ {'code': '20109', 'data': None, 'msg': '手机号码格式不正确', 'status': 0}
+?           ++  ^                         ^^^^^^^^^             ^
+Traceback (most recent call last):
+  File "/Users/huangjie/学习/untitled7/test_cases/test_register1.py", line 87, in test_register
+    self.assertEqual(eval(case.expected_data), res)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'} != {'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}
+- {'code': '10001', 'data': None, 'msg': '注册成功', 'status': 1}
+?             ^^^                         ^^^^             ^
+
++ {'code': '20109', 'data': None, 'msg': '手机号码格式不正确', 'status': 0}
+?           ++  ^                         ^^^^^^^^^             ^
+
+ Tue, 10 Mar 2020 15:05:35  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '17564371481', 'pwd': '1234567', 'regname': 'user1'}
+ Tue, 10 Mar 2020 15:05:35  ERROR test_register1.py test_register [ line:90 ] {'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'} != {'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}
+- {'code': '10001', 'data': None, 'msg': '注册成功', 'status': 1}
+?             ^^^                         ^^^^             ^
+
++ {'code': '20109', 'data': None, 'msg': '手机号码格式不正确', 'status': 0}
+?           ++  ^                         ^^^^^^^^^             ^
+Traceback (most recent call last):
+  File "/Users/huangjie/学习/untitled7/test_cases/test_register1.py", line 87, in test_register
+    self.assertEqual(eval(case.expected_data), res)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'} != {'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}
+- {'code': '10001', 'data': None, 'msg': '注册成功', 'status': 1}
+?             ^^^                         ^^^^             ^
+
++ {'code': '20109', 'data': None, 'msg': '手机号码格式不正确', 'status': 0}
+?           ++  ^                         ^^^^^^^^^             ^
+
+ Tue, 10 Mar 2020 15:05:35  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '17636597244', 'pwd': '1234567', 'regname': 'user1'}
+ Tue, 10 Mar 2020 15:05:35  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:36  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '18589437284', 'pwd': '1234567', 'regname': 'user1'}
+ Tue, 10 Mar 2020 15:05:36  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:36  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '18652038067', 'pwd': '1234567', 'regname': 'user1'}
+ Tue, 10 Mar 2020 15:05:36  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:36  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '16620998209', 'pwd': '1234567', 'regname': 'user1'}
+ Tue, 10 Mar 2020 15:05:36  ERROR test_register1.py test_register [ line:90 ] {'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'} != {'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}
+- {'code': '10001', 'data': None, 'msg': '注册成功', 'status': 1}
+?             ^^^                         ^^^^             ^
+
++ {'code': '20109', 'data': None, 'msg': '手机号码格式不正确', 'status': 0}
+?           ++  ^                         ^^^^^^^^^             ^
+Traceback (most recent call last):
+  File "/Users/huangjie/学习/untitled7/test_cases/test_register1.py", line 87, in test_register
+    self.assertEqual(eval(case.expected_data), res)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'} != {'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}
+- {'code': '10001', 'data': None, 'msg': '注册成功', 'status': 1}
+?             ^^^                         ^^^^             ^
+
++ {'code': '20109', 'data': None, 'msg': '手机号码格式不正确', 'status': 0}
+?           ++  ^                         ^^^^^^^^^             ^
+
+ Tue, 10 Mar 2020 15:05:36  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '13402686876', 'pwd': '1234567', 'regname': 'user1'}
+ Tue, 10 Mar 2020 15:05:37  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:37  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '13535098084', 'pwd': '1234567', 'regname': 'user1'}
+ Tue, 10 Mar 2020 15:05:37  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:37  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '13693655008', 'pwd': '1234567', 'regname': 'user2'}
+ Tue, 10 Mar 2020 15:05:37  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:37  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '13797894525', 'pwd': '1234567', 'regname': 'user2'}
+ Tue, 10 Mar 2020 15:05:37  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:38  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '13888880950', 'pwd': '1234567', 'regname': 'user3'}
+ Tue, 10 Mar 2020 15:05:38  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:38  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '13969554587', 'pwd': '1234567', 'regname': 'user3'}
+ Tue, 10 Mar 2020 15:05:38  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:38  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '14751222851', 'pwd': '1234567', 'regname': 'user4'}
+ Tue, 10 Mar 2020 15:05:38  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:39  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '15098666410', 'pwd': '1234567', 'regname': 'user4'}
+ Tue, 10 Mar 2020 15:05:39  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:39  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '15183911557', 'pwd': '1234567', 'regname': 'user5'}
+ Tue, 10 Mar 2020 15:05:39  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:39  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '15286181872', 'pwd': '1234567', 'regname': 'user5'}
+ Tue, 10 Mar 2020 15:05:39  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:39  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '15783027302', 'pwd': '1234567', 'regname': 'user6'}
+ Tue, 10 Mar 2020 15:05:40  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:40  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '15826618282', 'pwd': '1234567', 'regname': 'user6'}
+ Tue, 10 Mar 2020 15:05:40  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:40  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '15947291510', 'pwd': '1234567', 'regname': 'user7'}
+ Tue, 10 Mar 2020 15:05:40  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:40  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '17270370218', 'pwd': '1234567', 'regname': 'user7'}
+ Tue, 10 Mar 2020 15:05:40  ERROR test_register1.py test_register [ line:90 ] {'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'} != {'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}
+- {'code': '10001', 'data': None, 'msg': '注册成功', 'status': 1}
+?             ^^^                         ^^^^             ^
+
++ {'code': '20109', 'data': None, 'msg': '手机号码格式不正确', 'status': 0}
+?           ++  ^                         ^^^^^^^^^             ^
+Traceback (most recent call last):
+  File "/Users/huangjie/学习/untitled7/test_cases/test_register1.py", line 87, in test_register
+    self.assertEqual(eval(case.expected_data), res)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'} != {'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}
+- {'code': '10001', 'data': None, 'msg': '注册成功', 'status': 1}
+?             ^^^                         ^^^^             ^
+
++ {'code': '20109', 'data': None, 'msg': '手机号码格式不正确', 'status': 0}
+?           ++  ^                         ^^^^^^^^^             ^
+
+ Tue, 10 Mar 2020 15:05:41  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '17846184169', 'pwd': '1234567', 'regname': 'user8'}
+ Tue, 10 Mar 2020 15:05:41  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:41  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '18201896491', 'pwd': '1234567', 'regname': 'user8'}
+ Tue, 10 Mar 2020 15:05:41  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:41  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '18310452125', 'pwd': '1234567', 'regname': 'user9'}
+ Tue, 10 Mar 2020 15:05:41  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:42  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '18434531000', 'pwd': '1234567', 'regname': 'user9'}
+ Tue, 10 Mar 2020 15:05:42  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:42  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '18763375339', 'pwd': '1234567', 'regname': 'user8'}
+ Tue, 10 Mar 2020 15:05:42  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:42  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '18879413681', 'pwd': '1234567', 'regname': 'user9'}
+ Tue, 10 Mar 2020 15:05:42  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:43  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '18924198605', 'pwd': '1234567', 'regname': 'user9'}
+ Tue, 10 Mar 2020 15:05:43  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"注册成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'},测试通过
+ Tue, 10 Mar 2020 15:05:43  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '19210808966', 'pwd': '1234567', 'regname': 'user9'}
+ Tue, 10 Mar 2020 15:05:43  ERROR test_register1.py test_register [ line:90 ] {'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'} != {'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}
+- {'code': '10001', 'data': None, 'msg': '注册成功', 'status': 1}
+?             ^^^                         ^^^^             ^
+
++ {'code': '20109', 'data': None, 'msg': '手机号码格式不正确', 'status': 0}
+?           ++  ^                         ^^^^^^^^^             ^
+Traceback (most recent call last):
+  File "/Users/huangjie/学习/untitled7/test_cases/test_register1.py", line 87, in test_register
+    self.assertEqual(eval(case.expected_data), res)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'status': 1, 'code': '10001', 'data': None, 'msg': '注册成功'} != {'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}
+- {'code': '10001', 'data': None, 'msg': '注册成功', 'status': 1}
+?             ^^^                         ^^^^             ^
+
++ {'code': '20109', 'data': None, 'msg': '手机号码格式不正确', 'status': 0}
+?           ++  ^                         ^^^^^^^^^             ^
+
+ Tue, 10 Mar 2020 15:05:43  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '13941387738', 'pwd': '1234567', 'regname': 'user2'}
+ Tue, 10 Mar 2020 15:05:44  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":0,  "code":"20110", "data":None, "msg":"手机号码已被注册"}, 实际结果是：{'status': 0, 'code': '20110', 'data': None, 'msg': '手机号码已被注册'},测试通过
+ Tue, 10 Mar 2020 15:05:44  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '', 'pwd': '1234567', 'regname': 'user2'}
+ Tue, 10 Mar 2020 15:05:44  INFO test_register1.py test_register [ line:94 ] 预期结果是：{'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'}, 实际结果是：{'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'},测试通过
+ Tue, 10 Mar 2020 15:05:44  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '13078418242', 'pwd': '', 'regname': 'user2'}
+ Tue, 10 Mar 2020 15:05:44  ERROR test_register1.py test_register [ line:90 ] {'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'} != {'status': 0, 'code': '20103', 'data': None, 'msg': '密码不能为空'}
+- {'code': '20103', 'data': None, 'msg': '手机号不能为空', 'status': 0}
+?                                         ^^^
+
++ {'code': '20103', 'data': None, 'msg': '密码不能为空', 'status': 0}
+?                                         ^^
+Traceback (most recent call last):
+  File "/Users/huangjie/学习/untitled7/test_cases/test_register1.py", line 87, in test_register
+    self.assertEqual(eval(case.expected_data), res)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'} != {'status': 0, 'code': '20103', 'data': None, 'msg': '密码不能为空'}
+- {'code': '20103', 'data': None, 'msg': '手机号不能为空', 'status': 0}
+?                                         ^^^
+
++ {'code': '20103', 'data': None, 'msg': '密码不能为空', 'status': 0}
+?                                         ^^
+
+ Tue, 10 Mar 2020 15:05:44  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '18290159438', 'pwd': '123', 'regname': 'user3'}
+ Tue, 10 Mar 2020 15:05:44  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":0,  "code":"20108", "data":None, "msg":"密码长度必须为6~18"}, 实际结果是：{'status': 0, 'code': '20108', 'data': None, 'msg': '密码长度必须为6~18'},测试通过
+ Tue, 10 Mar 2020 15:05:45  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '1389087', 'pwd': '1234567', 'regname': 'user3'}
+ Tue, 10 Mar 2020 15:05:45  INFO test_register1.py test_register [ line:94 ] 预期结果是：{"status":0,  "code":"20109", "data":None, "msg":"手机号码格式不正确"}, 实际结果是：{'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'},测试通过
+ Tue, 10 Mar 2020 15:05:45  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/register， 请求参数：{'mobilephone': '18324524724', 'pwd': '哈哈', 'regname': 'user3'}
+ Tue, 10 Mar 2020 15:05:45  ERROR test_register1.py test_register [ line:90 ] {'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'} != {'status': 0, 'code': '20108', 'data': None, 'msg': '密码长度必须为6~18'}
+- {'code': '20109', 'data': None, 'msg': '手机号码格式不正确', 'status': 0}
+?               ^                         ^^^ ^^^^^
+
++ {'code': '20108', 'data': None, 'msg': '密码长度必须为6~18', 'status': 0}
+?               ^                         ^ ^^^^^^^^^
+Traceback (most recent call last):
+  File "/Users/huangjie/学习/untitled7/test_cases/test_register1.py", line 87, in test_register
+    self.assertEqual(eval(case.expected_data), res)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'} != {'status': 0, 'code': '20108', 'data': None, 'msg': '密码长度必须为6~18'}
+- {'code': '20109', 'data': None, 'msg': '手机号码格式不正确', 'status': 0}
+?               ^                         ^^^ ^^^^^
+
++ {'code': '20108', 'data': None, 'msg': '密码长度必须为6~18', 'status': 0}
+?               ^                         ^ ^^^^^^^^^
+
+ Tue, 10 Mar 2020 15:05:45  INFO test_register1.py tearDownClass [ line:61 ] ==================== 注册接口测试执行完毕====================
+ Tue, 10 Mar 2020 15:05:45  INFO test_withdraw.py setUpClass [ line:40 ] ==================== 准备开始执行登录接口测试 ====================
+ Tue, 10 Mar 2020 15:05:45  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/login， 请求参数：{'mobilephone': '13941387738', 'pwd': '1234567'}
+ Tue, 10 Mar 2020 15:05:46  INFO test_withdraw.py test_login [ line:81 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"登录成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '登录成功'},测试通过
+ Tue, 10 Mar 2020 15:05:46  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/login， 请求参数：{'mobilephone': '32423', 'pwd': '1234568'}
+ Tue, 10 Mar 2020 15:05:46  ERROR test_withdraw.py test_login [ line:77 ] {'status': 0, 'code': '20109', 'data': None, 'msg': '手机号格式不正确'} != {'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'}
+- {'code': '20109', 'data': None, 'msg': '手机号格式不正确', 'status': 0}
+?              ^^                         ^^^^^^^^
+
++ {'code': '20111', 'data': None, 'msg': '用户名或密码错误', 'status': 0}
+?              ^^                         ^^^^^^^^
+Traceback (most recent call last):
+  File "/Users/huangjie/学习/untitled7/test_cases/test_withdraw.py", line 74, in test_login
+    self.assertEqual(eval(case.expected_data), res)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'status': 0, 'code': '20109', 'data': None, 'msg': '手机号格式不正确'} != {'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'}
+- {'code': '20109', 'data': None, 'msg': '手机号格式不正确', 'status': 0}
+?              ^^                         ^^^^^^^^
+
++ {'code': '20111', 'data': None, 'msg': '用户名或密码错误', 'status': 0}
+?              ^^                         ^^^^^^^^
+
+ Tue, 10 Mar 2020 15:05:46  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/login， 请求参数：{'mobilephone': '13941387738', 'pwd': '1234567'}
+ Tue, 10 Mar 2020 15:05:46  INFO test_withdraw.py test_login [ line:81 ] 预期结果是：{"status":1,  "code":"10001", "data":None, "msg":"登录成功"}, 实际结果是：{'status': 1, 'code': '10001', 'data': None, 'msg': '登录成功'},测试通过
+ Tue, 10 Mar 2020 15:05:46  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/login， 请求参数：{'mobilephone': '13941387738', 'amount': '1'}
+ Tue, 10 Mar 2020 15:05:47  ERROR test_withdraw.py test_login [ line:77 ] {'status': 1, 'code': '10001', 'data': {'id': 1507, [178 chars]现成功'} != {'status': 0, 'code': '20103', 'data': None, 'msg': '密码不能为空'}
++ {'code': '20103', 'data': None, 'msg': '密码不能为空', 'status': 0}
+- {'code': '10001',
+-  'data': {'id': 1507,
+-           'leaveamount': '7586.00',
+-           'mobilephone': '13941387738',
+-           'pwd': 'FCEA920F7412B5DA7BE0CF42B8C93759',
+-           'regname': 'user1',
+-           'regtime': '2020-03-09 14:25:05.0',
+-           'type': '1'},
+-  'msg': '取现成功',
+-  'status': 1}
+Traceback (most recent call last):
+  File "/Users/huangjie/学习/untitled7/test_cases/test_withdraw.py", line 74, in test_login
+    self.assertEqual(eval(case.expected_data), res)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'status': 1, 'code': '10001', 'data': {'id': 1507, [178 chars]现成功'} != {'status': 0, 'code': '20103', 'data': None, 'msg': '密码不能为空'}
++ {'code': '20103', 'data': None, 'msg': '密码不能为空', 'status': 0}
+- {'code': '10001',
+-  'data': {'id': 1507,
+-           'leaveamount': '7586.00',
+-           'mobilephone': '13941387738',
+-           'pwd': 'FCEA920F7412B5DA7BE0CF42B8C93759',
+-           'regname': 'user1',
+-           'regtime': '2020-03-09 14:25:05.0',
+-           'type': '1'},
+-  'msg': '取现成功',
+-  'status': 1}
+ Tue, 10 Mar 2020 15:05:47  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/withdraw， 请求参数：{'mobilephone': '13941387738', 'amount': '20.098'}
+ Tue, 10 Mar 2020 15:05:47  INFO test_withdraw.py test_login [ line:81 ] 预期结果是：{'status': 0, 'code': '20116', 'data': None, 'msg': '输入金额的金额小数不能超过两位'}, 实际结果是：{'status': 0, 'code': '20116', 'data': None, 'msg': '输入金额的金额小数不能超过两位'},测试通过
+ Tue, 10 Mar 2020 15:05:47  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/withdraw， 请求参数：{'mobilephone': '13941387738', 'amount': '-30'}
+ Tue, 10 Mar 2020 15:05:48  INFO test_withdraw.py test_login [ line:81 ] 预期结果是：{'status': 0, 'code': '20117', 'data': None, 'msg': '请输入范围在0到50万之间的正数金额'}, 实际结果是：{'status': 0, 'code': '20117', 'data': None, 'msg': '请输入范围在0到50万之间的正数金额'},测试通过
+ Tue, 10 Mar 2020 15:05:48  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/withdraw， 请求参数：{'mobilephone': '13941387738', 'amount': '哈哈'}
+ Tue, 10 Mar 2020 15:05:48  INFO test_withdraw.py test_login [ line:81 ] 预期结果是：{'status': 0, 'code': '20118', 'data': None, 'msg': '请输入数字'}, 实际结果是：{'status': 0, 'code': '20118', 'data': None, 'msg': '请输入数字'},测试通过
+ Tue, 10 Mar 2020 15:05:48  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/login， 请求参数：{'mobilephone': '13941387738', 'amount': '5000000'}
+ Tue, 10 Mar 2020 15:05:48  ERROR test_withdraw.py test_login [ line:77 ] {'status': 0, 'code': '20117', 'data': None, 'msg': '请输入范围在0到50万之间的正数金额'} != {'status': 0, 'code': '20103', 'data': None, 'msg': '密码不能为空'}
+- {'code': '20117', 'data': None, 'msg': '请输入范围在0到50万之间的正数金额', 'status': 0}
+?              ^^                         ^^^^^^^^^^^^^^^^^^
+
++ {'code': '20103', 'data': None, 'msg': '密码不能为空', 'status': 0}
+?              ^^                         ^^^^^^
+Traceback (most recent call last):
+  File "/Users/huangjie/学习/untitled7/test_cases/test_withdraw.py", line 74, in test_login
+    self.assertEqual(eval(case.expected_data), res)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'status': 0, 'code': '20117', 'data': None, 'msg': '请输入范围在0到50万之间的正数金额'} != {'status': 0, 'code': '20103', 'data': None, 'msg': '密码不能为空'}
+- {'code': '20117', 'data': None, 'msg': '请输入范围在0到50万之间的正数金额', 'status': 0}
+?              ^^                         ^^^^^^^^^^^^^^^^^^
+
++ {'code': '20103', 'data': None, 'msg': '密码不能为空', 'status': 0}
+?              ^^                         ^^^^^^
+
+ Tue, 10 Mar 2020 15:05:48  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://118.24.221.133:8081/futureloan/mvc/api/member/login， 请求参数：{'mobilephone': '13941387738', 'amount': '#amout'}
+ Tue, 10 Mar 2020 15:05:49  INFO test_withdraw.py tearDownClass [ line:46 ] ==================== 登录接口测试执行完毕====================

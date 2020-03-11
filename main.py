@@ -55,7 +55,7 @@ for case in cases:
      pass
 
 # 发送邮件
-sendemail = SendEmail()
-file_path = os.path.join(REPORT_DIR, report_name)
-sendemail.send_qq_file_email(case.interface, case.title, file_path=file_path)
+# sendemail = SendEmail()
+# file_path = os.path.join(REPORT_DIR, report_name)
+# sendemail.send_qq_file_email(case.interface, case.title, file_path=file_path)
 

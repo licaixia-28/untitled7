@@ -66,7 +66,7 @@ class RegisterTestCase(unittest.TestCase):
 	def test_register(self, case):
 		url = conf.get("env", "url") + case.url
 		self.row = case.case_id + 1
-		request_data = replace_data(case.title, case.request_data)
+		request_data = replace_data(case.request_data)
 		response = self.request.request(method=case.method, url=url, data=eval(request_data))
 
 		print()
@@ -78,9 +78,9 @@ class RegisterTestCase(unittest.TestCase):
 		res = response.json()
 
 		# 查询数据库进行断言
-		phone = eval(request_data)["mobilephone"]
-		count = self.db.find_count("select * from member where MobilePhone=%s;" % phone)
-		self.assertEqual(count, 1)
+		# phone = eval(request_data)["mobilephone"]
+		# count = self.db.find_count("select * from member where MobilePhone=%s;" % phone)
+		# self.assertEqual(count, 1)
 		# AssertionError
 		try:
 			# 比较预期结果与实际返回的结果，类型不同不能比较，所以需要用eval转换下格式

@@ -11,12 +11,20 @@ E-mail:530103946@qq.com
 
 
 """
-a = "python"
-b = a.replace('p', 'a')
-print(b)
+import os
+import json
+
+from common.config import conf
+from common.dir_config import DATE_DIR
+from common.read_excel import ReadExcel
+
+
+
+file_name = conf.get("excel1", "file_name")
+wb = ReadExcel(os.path.join(DATE_DIR, file_name), "login")
+cases = wb.read_line_date()
+for case in cases:
+	a = case.request_data
+b = json.loads(a)
+print(type(b))
 print(a)
-
-
-str = "phone130"
-phone = str[-3:]
-print(phone)

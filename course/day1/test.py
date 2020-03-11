@@ -26,15 +26,25 @@ def random_phone(phone_head):
 
 # 冒泡排序1
 def order_by():
-	a = [1, 3, 4, 0, 9]
-	for f in range(4):
-		for i in range(4-f-1):
+	a = [1, 3, 4, 0, 9, 0, 2]
+	for f in range(7):
+		for i in range(7-f-1):
 				if a[i] >= a[i+1]:
 					t = a[i]
 					a[i] = a[i+1]
 					a[i+1] = t
 	return a
 
+def order_by1():
+	a = [1, 3, 4, 0, 9]
+	for i in range(4):
+		j = i+1
+		for  j in range(4):
+				if a[i] >= a[j]:
+					t = a[i]
+					a[i] = a[j]
+					a[j] = t
+				print(a)
 
 if __name__ == '__main__':
 	# ip = random_ip()
@@ -46,5 +56,5 @@ if __name__ == '__main__':
 	# 	a -= 1
 	# print(a)
 
-	b = order_by()
-	print(b)
+	a = order_by()
+	print(a)

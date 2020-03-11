@@ -33,6 +33,6 @@ class ReadConfig(configparser.ConfigParser):
 conf = ReadConfig()
 
 if __name__ == '__main__':
-	host = conf.get("mysql", "host")
+	host = conf.get("mysql1", "host")
 	print(host)
 

@@ -1,0 +1,24 @@
+ Wed, 11 Mar 2020 10:31:22  INFO test_search.py setUpClass [ line:57 ] ==================== 准备开始执行查询接口测试 ====================
+ Wed, 11 Mar 2020 10:31:22  INFO http_request.py request [ line:53 ] 正在发送请求，请求地址：http://144.34.200.237:8080/admin/login， 请求参数：{'username': 'ceshijiagoushi', 'password': '123456'}
+ Wed, 11 Mar 2020 10:31:23  ERROR test_search.py test_search [ line:93 ] {'cod[138 chars]1ODM4NTIyNTAxNTcsImV4cCI6MTU4NDQ1NzA1MH0.FoU99[79 chars]2Q'}} != {'cod[138 chars]1ODM4OTM4ODI4NDUsImV4cCI6MTU4NDQ5ODY4Mn0.GArF6[79 chars]DQ'}}
+  {'code': 200,
+-  'data': {'token': 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjZXNoaWppYWdvdXNoaSIsImNyZWF0ZWQiOjE1ODM4NTIyNTAxNTcsImV4cCI6MTU4NDQ1NzA1MH0.FoU99r-aeoGrdnpqj_3cIWwawtekOVuvY8jNw8-cAF-o2I8VDW9zhRjzbvAFvd96i_ylxT0EAs6Z7R8YBjML2Q',
++  'data': {'token': 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjZXNoaWppYWdvdXNoaSIsImNyZWF0ZWQiOjE1ODM4OTM4ODI4NDUsImV4cCI6MTU4NDQ5ODY4Mn0.GArF6OeeDk-vZF4ltVvdhwUy5zIOxV06IL5L2d3tIHO2U6R7WczEZlHwW5Me7H-3PhMNWXQcV6k4mpIwFH56DQ',
+            'tokenHead': 'Bearer'},
+   'message': '操作成功'}
+Traceback (most recent call last):
+  File "/Users/huangjie/学习/untitled7/test_cases/test_search.py", line 89, in test_search
+    self.assertEqual(eval(case.expected_data), res)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 852, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 1151, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/unittest/case.py", line 693, in fail
+    raise self.failureException(msg)
+AssertionError: {'cod[138 chars]1ODM4NTIyNTAxNTcsImV4cCI6MTU4NDQ1NzA1MH0.FoU99[79 chars]2Q'}} != {'cod[138 chars]1ODM4OTM4ODI4NDUsImV4cCI6MTU4NDQ5ODY4Mn0.GArF6[79 chars]DQ'}}
+  {'code': 200,
+-  'data': {'token': 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjZXNoaWppYWdvdXNoaSIsImNyZWF0ZWQiOjE1ODM4NTIyNTAxNTcsImV4cCI6MTU4NDQ1NzA1MH0.FoU99r-aeoGrdnpqj_3cIWwawtekOVuvY8jNw8-cAF-o2I8VDW9zhRjzbvAFvd96i_ylxT0EAs6Z7R8YBjML2Q',
++  'data': {'token': 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJjZXNoaWppYWdvdXNoaSIsImNyZWF0ZWQiOjE1ODM4OTM4ODI4NDUsImV4cCI6MTU4NDQ5ODY4Mn0.GArF6OeeDk-vZF4ltVvdhwUy5zIOxV06IL5L2d3tIHO2U6R7WczEZlHwW5Me7H-3PhMNWXQcV6k4mpIwFH56DQ',
+            'tokenHead': 'Bearer'},
+   'message': '操作成功'}
+ Wed, 11 Mar 2020 10:31:23  INFO test_search.py tearDownClass [ line:63 ] ==================== 查询接口测试执行完毕====================

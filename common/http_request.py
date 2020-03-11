@@ -68,7 +68,7 @@ if __name__ == '__main__':
 	httprequest = HTTPRequest1()
 	url = "http://118.24.221.133:8081/futureloan/mvc/api/member/login"
 	method = "post"
-	data = "{'mobilephone': '13342884220', 'pwd': '123456'}"
+	data = {'mobilephone': '', 'pwd': '123456'}
 	response = httprequest.request(method=method, url=url, data=data)
 	print(response.status_code)
 	print(response.json())
