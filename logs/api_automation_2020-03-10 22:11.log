@@ -1,3 +1,0 @@
- Tue, 10 Mar 2020 22:11:15  INFO test_search.py setUpClass [ line:56 ] ==================== 准备开始执行查询接口测试 ====================
- Tue, 10 Mar 2020 22:11:15  INFO http_request.py request [ line:56 ] 正在发送请求，请求地址：http://144.34.200.237:8080/admin/login， 请求参数：{"username":"ceshijiagoushi","password":"123456"}
- Tue, 10 Mar 2020 22:11:15  INFO test_search.py tearDownClass [ line:62 ] ==================== 查询接口测试执行完毕====================

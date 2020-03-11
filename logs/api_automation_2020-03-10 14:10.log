@@ -1,8 +1,0 @@
- Tue, 10 Mar 2020 14:10:38  INFO test_login.py setUpClass [ line:40 ] ==================== 准备开始执行登录接口测试 ====================
- Tue, 10 Mar 2020 14:10:39  INFO test_login.py tearDownClass [ line:46 ] ==================== 登录接口测试执行完毕====================
- Tue, 10 Mar 2020 14:10:39  INFO test_recharge.py setUpClass [ line:41 ] ==================== 准备开始执行充值接口测试 ====================
- Tue, 10 Mar 2020 14:10:39  INFO test_recharge.py tearDownClass [ line:47 ] ==================== 充值接口测试接口测试执行完毕====================
- Tue, 10 Mar 2020 14:10:39  INFO test_register1.py setUpClass [ line:55 ] ==================== 准备开始执行注册接口测试 ====================
- Tue, 10 Mar 2020 14:10:39  INFO test_register1.py tearDownClass [ line:61 ] ==================== 注册接口测试执行完毕====================
- Tue, 10 Mar 2020 14:10:39  INFO test_withdraw.py setUpClass [ line:40 ] ==================== 准备开始执行登录接口测试 ====================
- Tue, 10 Mar 2020 14:10:39  INFO test_withdraw.py tearDownClass [ line:46 ] ==================== 登录接口测试执行完毕====================

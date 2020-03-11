@@ -1,7 +1,0 @@
- Wed, 11 Mar 2020 11:46:10  INFO http_request.py request [ line:53 ] 正在发送请求，请求地址：http://144.34.200.237:8080/admin/login， 请求参数：{'password': '123456', 'username': 'ceshijiagoushi'}
- Wed, 11 Mar 2020 11:46:11  INFO http_request.py request [ line:59 ] 正在发送请求，请求地址：http://144.34.200.237:8080/order/list， 请求参数：None
- Wed, 11 Mar 2020 11:46:11  INFO http_request.py request [ line:53 ] 正在发送请求，请求地址：http://144.34.200.237:8080/admin/login， 请求参数：{'password': '123456', 'username': 'ceshijiagoushi'}
- Wed, 11 Mar 2020 11:46:24  INFO http_request.py request [ line:53 ] 正在发送请求，请求地址：http://144.34.200.237:8080/admin/login， 请求参数：{'password': '123456', 'username': 'ceshijiagoushi'}
- Wed, 11 Mar 2020 11:46:25  INFO http_request.py request [ line:53 ] 正在发送请求，请求地址：http://144.34.200.237:8080/admin/login， 请求参数：{'password': '123456', 'username': 'ceshijiagoushi'}
- Wed, 11 Mar 2020 11:46:45  INFO http_request.py request [ line:53 ] 正在发送请求，请求地址：http://144.34.200.237:8080/admin/login， 请求参数：{'password': '123456', 'username': 'ceshijiagoushi'}
- Wed, 11 Mar 2020 11:46:45  INFO http_request.py request [ line:53 ] 正在发送请求，请求地址：http://144.34.200.237:8080/admin/login， 请求参数：{'password': '123456', 'username': 'ceshijiagoushi'}

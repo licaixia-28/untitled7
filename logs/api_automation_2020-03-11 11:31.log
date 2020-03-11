@@ -1,2 +1,0 @@
- Wed, 11 Mar 2020 11:31:44  INFO http_request.py request [ line:59 ] 正在发送请求，请求地址：http://144.34.200.237:8080/order/list， 请求参数：None
- Wed, 11 Mar 2020 11:31:55  INFO http_request.py request [ line:59 ] 正在发送请求，请求地址：http://144.34.200.237:8080/order/list， 请求参数：None
